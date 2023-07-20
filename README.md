@@ -6,7 +6,7 @@ This project consists in an application of one of the basic models of Machine Le
 
 ### Step 1: Settling on an underlying problem :thinking:
 
--> The different factors that impacted the unequal development/advancement of technology by looking at the Global Internet Penetration Rate and other relevant socio-economic.
+-> The different factors that impacted the unequal development/advancement of technology by looking at the Global Internet Penetration Rate and other relevant socio-economic coefficients.
 
 
 ### Step 2: Work environment :computer:
