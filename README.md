@@ -45,7 +45,7 @@ This project consists in an application of one of the basic models of Machine Le
     5. Prediction of the Internet Penetration Rate based on the second model that had all features
     6. Second model evaluation
  
-:exclamation: In the Polynomial Regression implementation, for academic purposes in both the first and the second model I used the ARIMA predictions for years 2022-2024 when creating the Test sets and in the model evaluation for the actual values of the Internet Penetration Rate.
+:exclamation: In the **Polynomial Regression** implementation, for academic purposes in both the first and the second model I used the ARIMA predictions for years 2022-2024 when creating the Test sets and in the model evaluation for the actual values of the Internet Penetration Rate.
 
 
 ### Step 5: Conclusion :white_check_mark:
