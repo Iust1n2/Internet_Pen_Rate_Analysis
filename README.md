@@ -52,6 +52,8 @@ This project consists in an application of one of the basic models of Machine Le
 
   During the Polynomial Regression implementation, while testing various features combinations I came across the most accurate model when looking at the predictions of the regression and the predictions of the ARIMA Model, which is the model containing the GDP per capita and Urbanization Rate % as exogenous variables. 
   
+  Testing the model performance in R showed strong correlation and relevance between the independent variables and the dependent variable.
+  
   Also, in Jupyter Notebook, the model evaluation showed quite good results when looking at the R-squared score: for the 2019-2021 range in which I used the actual values for the train set and the random values for the test set, the R-score was 0.8186 and for the 2022-2024 range in which I used the ARIMA predictions for both the train and test set, the R-score was  0.9626.
 
 
