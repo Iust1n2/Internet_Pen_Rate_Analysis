@@ -24,7 +24,7 @@ This project consists in an application of one of the basic models of Machine Le
 
 1. Internet Penetration Rate: https://data.worldbank.org/indicator/IT.NET.USER.ZS
 2. GDP Growth Dataset: https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG
-3. GDP Dataset: https://data.worldbank.org/indicator/NY.GDP.MKTP.CD
+3. GDP per Capita Dataset: https://data.worldbank.org/indicator/NY.GDP.PCAP.KN?end=2022&start=1960
 4. Urbanization Rate Dataset: https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS
 
 
