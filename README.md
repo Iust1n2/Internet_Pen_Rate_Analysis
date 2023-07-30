@@ -108,6 +108,28 @@ By comparing Romania and South Korea, it was evident that historical factors, su
 
 The implementation of ARIMA and Polynomial Regression models provided valuable insights and reasonably accurate predictions for the Internet Penetration Rate in both countries, shedding light on their technological trajectory in the coming years.
 
+### Future Work :bulb:
+
+To enhance the analysis, my future plans include incorporating additional features into the model and implementing more advanced prediction algorithms like Neural Networks or SARIMA/SARIMAX. As I am currently in the early stages of my Machine Learning journey, I aim to explore and leverage these techniques to improve the accuracy and depth of the predictions.
 
 
+### References
+
+These following sources and materials helped me gain a better understanding of Time-Series Analysis and prediction algorithms: 
+
+Building the ARIMA Model:
+
+ - https://www.projectpro.io/article/how-to-build-arima-model-in-python/544
+ 
+ - https://towardsdatascience.com/machine-learning-part-19-time-series-and-autoregressive-integrated-moving-average-model-arima-c1005347b0d7
+ 
+ - https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/
+ 
+ - https://www.justintodata.com/arima-models-in-python-time-series-prediction/
+
+Bulding the Polynomial Regression: 
+
+In order to implement the Polynomial Regression I relied mostly on the knowledge and resources provided from the "Machine-Learning A-Z in Python & R" course on Udemy, taught by Kirill Eremenko and Hadelin de Ponteves.
+
+ 
 
