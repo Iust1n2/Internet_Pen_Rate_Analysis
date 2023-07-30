@@ -102,6 +102,11 @@ Overall, the metrics suggest that the 1st Model provides reasonably accurate pre
 
 ### Step 7: Conclusion :white_check_mark:
 
+This project applied the basic models of Polynomial Regression and Time-Series Analysis (ARIMA) to explore the factors influencing technological advancement, with a focus on Internet Penetration Rate, GDP, and Urbanization Rate. 
+
+By comparing Romania and South Korea, it was evident that historical factors, such as Romania's past communism and centrally planned economy, significantly impacted its technological progress. On the other hand, South Korea's rapid embrace of market-oriented policies and investments in innovation propelled its technological advancement. These factual information we can infer from the analysis of the GDP Growth Rate, GDP per Capita and Urbanization Rate, highly relevant socio-economic factors.
+
+The implementation of ARIMA and Polynomial Regression models provided valuable insights and reasonably accurate predictions for the Internet Penetration Rate in both countries, shedding light on their technological trajectory in the coming years.
 
 
 
