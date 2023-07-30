@@ -129,7 +129,12 @@ Building the ARIMA Model:
 
 Bulding the Polynomial Regression: 
 
-In order to implement the Polynomial Regression I relied mostly on the knowledge and resources provided from the "Machine-Learning A-Z in Python & R" course on Udemy, taught by Kirill Eremenko and Hadelin de Ponteves.
+In order to implement the Polynomial Regression I relied mostly on the knowledge and resources provided from the "Machine-Learning A-Z in Python & R" course on Udemy, taught by Kirill Eremenko and Hadelin de Ponteves. 
+
+Other resources: 
+
+  - https://towardsdatascience.com/polynomial-regression-in-python-dd655a7d9f2b
+  - https://aamir07.medium.com/polynomial-regression-with-k-fold-cross-validation-bc5275137546
 
  
 
