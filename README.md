@@ -30,7 +30,13 @@ This project consists in an application of one of the basic models of Machine Le
 
 ### Step 4: Exploratory Analysis for the 2 target countries :earth_asia:
 
-Moving forward from the Data Cleaning & Preprocessing part in which I have gathered the factors that describe best the current state of the technological advancement, I chose Romania as target country and South Korea as the comparison country. The objective is to observe and analyze which factors contributed to an unequal advancement and visualize the results more easily by plotting the indicators side by side using subplots. 
+Moving forward from the Data Cleaning & Preprocessing part in which I have gathered the factors that describe best the current state of the technological advancement, I chose Romania as target country and South Korea as the comparison country. The objective is to observe and analyze which factors contributed to an unequal advancement and visualize the results more easily by plotting the indicators side by side using subplots. Also I found out that Corellation Heatmaps offer valuable insight on how the "activity" of each coefficient.
+
+By looking at each individual plot I concluded that the evolution of the Internet Penetration Rate and the GDP and Urbanization Rate variables followed a somewhat similar pattern, with a skyrocket growth from 2014 up to 2018-2019, followed by a drastical decline in 2020, due to the economic crysis that took the world by assault, or better said by COVID, followed by a recovery in 2021. 
+
+Nevertheless, these aspects do not underline the inequality of technological progress between the two countries. Without delving too deep into history of the economies of each country we can still see some differences. Romania in the past two decades recovered with small steps from a political regime that affected all the following economic activities, impacting the most industries such as Heavy Industry, Agriculture, State-Owned Enterprises and IT.  
+
+The most significant aspect differentiating South Korea from Romania in technological advancement is South Korea's rapid embrace of market-oriented policies and investments in innovation after transitioning from a agrarian country with a traditional economy, whereas Romania's history of communism and centrally planned economy hindered its technological progress and development.
 
 
 ### Step 5: Implementing the ML Models :chart_with_upwards_trend:
