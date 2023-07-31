@@ -6,7 +6,7 @@ This project consists in an application of one of the basic models of Machine Le
 
 ### Step 1: Settling on an underlying problem :thinking:
 
--> The different factors that impacted the unequal development/advancement of technology by looking at the Global Internet Penetration Rate and other relevant socio-economic coefficients, such as GDP and Urbanization Rate.
+-> The different factors that affected the unequal advancement of technology by looking at the Internet Penetration Rate and other relevant socio-economic coefficients, such as GDP and Urbanization Rate.
 
 
 ### Step 2: Work environment :computer:
@@ -34,7 +34,7 @@ Moving forward from the Data Cleaning & Preprocessing part in which I have gathe
 
 By looking at each individual plot I concluded that the evolution of the Internet Penetration Rate and the GDP and Urbanization Rate variables followed a somewhat similar pattern, with a skyrocket growth from 2014 up to 2018-2019, followed by a drastical decline in 2020, due to the economic crysis that took the world by assault, or better said by COVID, followed by a recovery in 2021. 
 
-Nevertheless, these aspects do not underline the inequality of technological progress between the two countries. Without delving too deep into history of the economies of each country we can still see some differences. Romania in the past two decades recovered with small steps from a political regime that affected all the following economic activities, impacting the most industries such as Heavy Industry, Agriculture, State-Owned Enterprises and IT.  
+Nevertheless, these aspects are merely an indication of economic growth and do not fully underline the inequality of technological progress between the two countries. Without delving too deep into the history of the economies of each country we can still see some differences. Romania in the past two decades recovered with small steps from a political regime that affected almost every economic sector.
 
 The most significant aspect differentiating South Korea from Romania in technological advancement is South Korea's rapid embrace of market-oriented policies and investments in innovation after transitioning from a agrarian country with a traditional economy, whereas Romania's history of communism and centrally planned economy hindered its technological progress and development.
 
