@@ -12,7 +12,6 @@ This project consists in an application of one of the basic models of Machine Le
 ### Step 2: Work environment :computer:
   - Excel for the display of various data from multiple sources
   - Jupyter Notebook for data preprocessing and visualization, implementing the ML algorithms
-  - R for evaluating model performance
   - Libraries used: Pandas, Numpy, Matplotlib, Sklearn, Statsmodels, Seaborn
 
 
