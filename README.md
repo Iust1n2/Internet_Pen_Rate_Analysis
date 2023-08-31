@@ -54,52 +54,66 @@ Because the format of the data is auto-regressive time-series I used the **ARIMA
     7.	We plot the predictions 
 
 
-- **Polynomial Regression**: predict the Internet Penetration Rate % based on the GDP and Urbanization Rate features
-  1.	We create the features of our standard model ( **Year** as X & **Internet Penetration Rate** as y)
-  2.	We fit the Linear Regression to X and y variables
-  3.	We create the Polynomial Regressor with a chosen degree of 4
-  4.	We create **X_poly** as the transformation of the matrix of features X into the matrix of features X_poly by adding the additional coefficients polynomial terms into the matrix X by the value of the degree
-  5.	We fit the Polynomial Regression to X_poly and y
-  6.	We visualize the Polynomial Regression for both Romania and South Korea using subplots
-  7.	We build the 1st and 2nd models using a combination of all available features  (the 1st model uses **GDP Per Capita** and **Urbanization Rate** and the 2nd model consists of **all three coefficients**)
-  8.	For each model we fit the Polynomial Regression again to our chosen exogenous variables
-  9.	We create test data for each variable in X, in order to perform the forecast, using random values for years 2019-2021 and for years 2022-2024 we use predictions from the ARIMA Model
-  10.	We create X_poly using the transform method for all years: 2019-2024
-  11.	Then we use the **predict** method that takes X_poly as parameter and we print the resulting values
+- **Polynomial Regression**: predict the Internet Penetration Rate % for 2 models (1st containing the **Year** as independent variable & the 2nd containing **Year and GDP per capita** as independent variables)
+  1.	Declare the variables of the model as X and y
+  2.	Perform train/test split with a rate of 0.2 
+  3.	Create the polynomial features with a **poly degree of 2** and declare **X_train_poly and X_test_poly**
+  4.	**Fit** the polynomial regression model to **X_train_poly and y_train**
+  5.	Make **future predictions** for years 2022-2024 and also provide predictions for years 2019-2021 in order to verify accuracy
+  6.	Visualize the Polynomial Regression results 
+  7.	Print the predictions
+  8.	Perform Model Evaluation with metrics such as **R-squared, MAE,  MSE, RMSE** on Training Data
+  9.	Perform Model Evaluation on Test Data
 
- 
-:exclamation: In the **Polynomial Regression** implementation, for academic purposes in both the first and the second model I used the ARIMA predictions for years 2022-2024 when creating the Test sets and in the model evaluation for the actual values of the Internet Penetration Rate.
+
+:exclamation: In the **Polynomial Regression** implementation, for academic purposes in the 2nd model I used the ARIMA predictions for years 2022-2024 when creating the Test data for the GDP per capita.
 
 
 ### Step 6: Model Evaluation :ok:
-
-In order to perform the Model Evaluation we need to provide the actual values of the Internet Penetration Rate ( the y variable), but because the data is limited up to 2021 I used the predictions of the ARIMA Model for years 2022-2024.
 
 Testing the model performance in R showed strong correlation and relevance between the independent variables and the dependent variable.
 
 As for the evaluation methods, in Jupyter Notebook I used the most relevant ones for our case: **R-squared, Mean Absolute Error (MAE) , Mean Squared Error (MSE) and Root Mean Squared Error (RMSE)**.
 
-Between the two, the most accurate model, when looking at the prediction results of the Polynomial Regression and the previous results of the ARIMA Model, is the 1st model, containing the GDP per Capita and Urbanization Rate as exogenous variables.
+Both models performed well, providing really close predictions to one-another with a high accuracy and relatively low error scores: 
 
 #### 1st Model evaluation metrics: 
 
-**Model Accuracy 2019-2021**: **0.8185**
+**Model Accuracy on Training Data**: **1.00**
 
-Mean Absolute Error (MAE): **1.5315**
+Mean Absolute Error (MAE) (Training): **0.92**
 
-Mean Squared Error (MSE): **2.984**
+Mean Squared Error (MSE) (Training): **1.11**
 
-Root Mean Squared Error (RMSE): **1.727**
+Root Mean Squared Error (RMSE) (Training): **1.05**
 
-**Model Accuracy 2022-2024**: **0.9626**
+**Model Accuracy on Test Data**: **0.99**
 
-Mean Absolute Error (MAE): **0.57**
+Mean Absolute Error (MAE) (Test): **1.12**
 
-Mean Squared Error (MSE): **0.5447**
+Mean Squared Error (MSE) (Test): **1.55**
 
-Root Mean Squared Error (RMSE): **0.738**
+Root Mean Squared Error (RMSE) (Test): **1.24**
 
-Overall, the metrics suggest that the 1st Model provides reasonably accurate predictions for both the years 2019-2021 and 2022-2024, with high R-squared values indicating a good fit between the model and the observed data and relatively low error scores.
+
+#### 2nd Model evaluation metrics: 
+
+**Model Accuracy on Training Data**: **1.00**
+
+Mean Absolute Error (MAE) (Training): **0.78**
+
+Mean Squared Error (MSE) (Training): **0.77**
+
+Root Mean Squared Error (RMSE) (Training): **0.88**
+
+**Model Accuracy on Test Data**: **0.98**
+
+Mean Absolute Error (MAE) (Test): **1.53**
+
+Mean Squared Error (MSE) (Test): **2.56**
+
+Root Mean Squared Error (RMSE) (Test): **1.60**
+
 
 ### Step 7: Conclusion :white_check_mark:
 
@@ -107,7 +121,7 @@ This project applied the basic models of Polynomial Regression and Time-Series A
 
 By comparing Romania and South Korea, it was evident that historical factors, such as Romania's past communism and centrally planned economy, significantly impacted its technological progress. On the other hand, South Korea's rapid embrace of market-oriented policies and investments in innovation propelled its technological advancement. These factual information we can infer from the analysis of the GDP Growth Rate, GDP per Capita and Urbanization Rate, highly relevant socio-economic factors.
 
-The implementation of ARIMA and Polynomial Regression models provided valuable insights and reasonably accurate predictions for the Internet Penetration Rate in both countries, shedding light on their technological trajectory in the coming years.
+The implementation of ARIMA and Polynomial Regression models provided valuable insights and reasonably accurate predictions for the Internet Penetration Rate in Romania, shedding light on it's technological trajectory in the upcoming years.
 
 ### Future Work :bulb:
 
