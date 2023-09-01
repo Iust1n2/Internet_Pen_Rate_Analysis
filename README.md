@@ -43,7 +43,7 @@ The most significant aspect differentiating South Korea from Romania in technolo
 
 Because the format of the data is auto-regressive time-series I used the **ARIMA** Model in order to predict the Internet Penetration Rate individually and **Polynomial Regression** to predict the Internet Penetration Rate based on the GDP per Capita, GDP Growth Rate % and Urbanization Rate %.
 
-- **ARIMA**: predict the Internet Penetration Rate and the GDP and Urbanization Rate features individually
+- **ARIMA**: predict the Internet Penetration Rate individually
     1. Determine the parameters (**p,d,q**) of the ARIMA Model
     2. For the **q** parameter (number of moving-average terms) we plot the Autocorrelation and Partial Autocorrelation
     3. For the **p** parameter (number of autoregressive terms) we plot the 1st Order and 2nd Order Differencing
@@ -118,7 +118,7 @@ Root Mean Squared Error (RMSE) (Test): **1.60**
 
 This project applied the basic models of Polynomial Regression and Time-Series Analysis (ARIMA) to explore the factors influencing technological advancement, with a focus on Internet Penetration Rate, GDP, and Urbanization Rate. 
 
-By comparing Romania and South Korea, it was evident that historical factors, such as Romania's past communism and centrally planned economy, significantly impacted its technological progress. On the other hand, South Korea's rapid embrace of market-oriented policies and investments in innovation propelled its technological advancement. These factual information we can infer from the analysis of the GDP Growth Rate, GDP per Capita and Urbanization Rate, highly relevant socio-economic factors.
+By comparing Romania and South Korea, it was evident that historical factors, such as Romania's past Communism and centrally planned economy, significantly impacted its technological progress. On the other hand, South Korea's rapid embrace of market-oriented policies and investments in innovation propelled its technological advancement. These factual information we can infer from the analysis of the GDP Growth Rate, GDP per Capita and Urbanization Rate, highly relevant socio-economic factors.
 
 The implementation of ARIMA and Polynomial Regression models provided valuable insights and reasonably accurate predictions for the Internet Penetration Rate in Romania, shedding light on it's technological trajectory in the upcoming years.
 
