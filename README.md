@@ -99,11 +99,11 @@ Root Mean Squared Error (RMSE) (Test): **1.24**
 
 **Model Accuracy on Training Data**: **1.00**
 
-Mean Absolute Error (MAE) (Training): **0.92**
+Mean Absolute Error (MAE) (Training): **0.78**
 
-Mean Squared Error (MSE) (Training): **01.11**
+Mean Squared Error (MSE) (Training): **0.77**
 
-Root Mean Squared Error (RMSE) (Training): **1.05**
+Root Mean Squared Error (RMSE) (Training): **0.88**
 
 **Model Accuracy on Test Data**: **0.98**
 
