@@ -7,6 +7,7 @@ This project consists in an application of one of the basic models of Machine Le
 ### Step 1: Settling on an underlying problem :thinking:
 
 -> The different factors that affected the unequal advancement of technology by looking at the Internet Penetration Rate and other relevant socio-economic coefficients, such as GDP and Urbanization Rate.
+
 -> Projecting future Internet Penetration rates 
 
 ### Step 2: Work environment :computer:
