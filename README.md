@@ -1,4 +1,4 @@
-#  First ML Project
+#  Internet Penetration Rate Analysis
 
 This project consists in an application of one of the basic models of Machine Learning **(Polynomial Regression)** and Time-Series Analysis **(ARIMA)** in a real life problem. Choosing the Internet Penetration Rate as the main feature of the analysis and by looking at its major influencing factors, GDP and Urbanization Rate we can get a sense of how the technological advancement will look like in the following years. 
 
@@ -8,6 +8,7 @@ This project consists in an application of one of the basic models of Machine Le
 
 -> The different factors that affected the unequal advancement of technology by looking at the Internet Penetration Rate and other relevant socio-economic coefficients, such as GDP and Urbanization Rate.
 
+-> Projecting future Internet Penetration rates 
 
 ### Step 2: Work environment :computer:
   - Excel for the display of various data from multiple sources
@@ -44,13 +45,16 @@ The most significant aspect differentiating South Korea from Romania in technolo
 Because the format of the data is auto-regressive time-series I used the **ARIMA** Model in order to predict the Internet Penetration Rate individually and **Polynomial Regression** to predict the Internet Penetration Rate based on the GDP per Capita, GDP Growth Rate % and Urbanization Rate %.
 
 - **ARIMA**: predict the Internet Penetration Rate individually
-    1. Determine the parameters (**p,d,q**) of the ARIMA Model
-    2. For the **q** parameter (number of moving-average terms) we plot the Autocorrelation and Partial Autocorrelation
-    3. For the **p** parameter (number of autoregressive terms) we plot the 1st Order and 2nd Order Differencing
-    4. For the **d** parameter (number of nonseasonal differencing) we perform the Augmented Dickey-Fuller test for stationarity
-    5. We build the ARIMA Model with an order of (p,d,q) that we determined by looking at the plots
-    6.	We use the **forecast** method in order to make future predictions
-    7.	We plot the predictions 
+    1. Prepare the data; perform train-test split
+    2. Determine the parameters (**p,d,q**) of the ARIMA Model:
+        1. For the **d** parameter (number of nonseasonal differencing) we perform the **Augmented Dickey-Fuller test** for stationarity
+        2. For the **p** parameter (number of autoregressive terms) we plot and analyze the **1st Order and 2nd Order Differencing** plots
+        3. For the **q** parameter (number of moving-average terms) we plot and analyze the **Autocorrelation and Partial Autocorrelation** plots
+        
+    4. We build the ARIMA Model with an order of (p,d,q) that we determined by analyzing the plots
+    5.	We use the **forecast** method in order to make predictions for the test set, as well as future values 
+    6.	We plot the predictions
+    7.	We evaluate Model Performance 
 
 
 - **Polynomial Regression**: predict the Internet Penetration Rate % for 2 models (1st containing the **Year** as independent variable & the 2nd containing **Year and GDP per capita** as independent variables)
@@ -70,55 +74,57 @@ Because the format of the data is auto-regressive time-series I used the **ARIMA
 
 ### Step 6: Model Evaluation :ok:
 
-Testing the model performance in R showed strong correlation and relevance between the independent variables and the dependent variable.
+For model evaluation, I used the most relevant statistical metrics: **R-squared, Mean Absolute Error (MAE), Mean Absolute Percentage Error (MAPE), Mean Squared Error (MSE) and Root Mean Squared Error (RMSE)**.
 
-As for the evaluation methods, in Jupyter Notebook I used the most relevant ones for our case: **R-squared, Mean Absolute Error (MAE) , Mean Squared Error (MSE) and Root Mean Squared Error (RMSE)**.
+The ARIMA model for Romania did not perform well, with high error rates (MAE:  15.01047, MAPE: 0.19152, RMSE: 15.0108).
 
-Both models performed well, providing really close predictions to one-another with a high accuracy and relatively low error scores: 
+As for South Korea, ARIMA managed to perform decently (MAE:  2.15964, MAPE: 0.02233, RMSE: 2.17502).
+
+However, both Polynomial Regression models performed well, providing really close predictions to one-another with a high accuracy and relatively low error scores: 
 
 #### 1st Model evaluation metrics: 
 
 **Model Accuracy on Training Data**: **1.00**
 
-Mean Absolute Error (MAE) (Training): **0.92**
+MAE (Training): **0.92**
 
-Mean Squared Error (MSE) (Training): **1.11**
+MSE (Training): **1.11**
 
-Root Mean Squared Error (RMSE) (Training): **1.05**
+RMSE (Training): **1.05**
 
 **Model Accuracy on Test Data**: **0.99**
 
-Mean Absolute Error (MAE) (Test): **1.12**
+MAE (Test): **1.12**
 
-Mean Squared Error (MSE) (Test): **1.55**
+MSE (Test): **1.55**
 
-Root Mean Squared Error (RMSE) (Test): **1.24**
+RMSE (Test): **1.24**
 
 
 #### 2nd Model evaluation metrics: 
 
 **Model Accuracy on Training Data**: **1.00**
 
-Mean Absolute Error (MAE) (Training): **0.78**
+MAE (Training): **0.78**
 
-Mean Squared Error (MSE) (Training): **0.77**
+MSE (Training): **0.77**
 
-Root Mean Squared Error (RMSE) (Training): **0.88**
+RMSE (Training): **0.88**
 
 **Model Accuracy on Test Data**: **0.98**
 
-Mean Absolute Error (MAE) (Test): **1.53**
+MAE (Test): **1.53**
 
-Mean Squared Error (MSE) (Test): **2.56**
+MSE (Test): **2.56**
 
-Root Mean Squared Error (RMSE) (Test): **1.60**
+RMSE (Test): **1.60**
 
 
 ### Step 7: Conclusion :white_check_mark:
 
 This project applied the basic models of Polynomial Regression and Time-Series Analysis (ARIMA) to explore the factors influencing technological advancement, with a focus on Internet Penetration Rate, GDP, and Urbanization Rate. 
 
-By comparing Romania and South Korea, it was evident that historical factors, such as Romania's past Communism and centrally planned economy, significantly impacted its technological progress. On the other hand, South Korea's rapid embrace of market-oriented policies and investments in innovation propelled its technological advancement. These factual information we can infer from the analysis of the GDP Growth Rate, GDP per Capita and Urbanization Rate, highly relevant socio-economic factors.
+By comparing Romania and South Korea, it was evident that historical factors, such as Romania's past Communism and centrally planned economy, significantly impacted its technological progress. On the other hand, South Korea's rapid embrace of market-oriented policies and investments in innovation propelled its technological advancement. These factual information we can infer from the analysis of the GDP Growth Rate, GDP per capita and Urbanization Rate, highly relevant socio-economic factors.
 
 The implementation of ARIMA and Polynomial Regression models provided valuable insights and reasonably accurate predictions for the Internet Penetration Rate in Romania, shedding light on it's technological trajectory in the upcoming years.
 
