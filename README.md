@@ -1,22 +1,37 @@
 #  Internet Penetration Rate Analysis
 
+## Overview
+
 This project consists in an application of one of the basic models of Machine Learning **(Polynomial Regression)** and Time-Series Analysis **(ARIMA)** in a real life problem. Choosing the Internet Penetration Rate as the main feature of the analysis and by looking at its major influencing factors, GDP and Urbanization Rate we can get a sense of how the technological advancement will look like in the following years. 
 
-## Intuition
+## Table of Contents
 
-### Step 1: Settling on an underlying problem :thinking:
+- [Overview](#overview)
+- [Table of Contents](#table-of-contents)
+- [Settling on an underlying problem](#settling-on-an-underlying-problem-thinking)
+- [Work Environment](#work-environment-computer)
+- [Gathering and Preprocessing the Data](#gathering-and-preprocessing-the-data-bar_chart)
+- [Exploratory Analysis for the 2 target countries](#exploratory-analysis-for-the-2-target-countries-earth_asia)
+- [Implementing the ML Models](#implementing-the-ml-models-chart_with_upwards_trend)
+  - [ARIMA](#arima)
+  - [Polynomial Regression](#polynomial-regression)
+- [Model Evaluation](#model-evaluation-ok)
+- [Conclusion](#conclusion-white_check_mark)  
+- [Acknowledgements](#acknowledgements)
+
+## Settling on an underlying problem :thinking:
 
 -> The different factors that affected the unequal advancement of technology by looking at the Internet Penetration Rate and other relevant socio-economic coefficients, such as GDP and Urbanization Rate.
 
 -> Projecting future Internet Penetration rates 
 
-### Step 2: Work environment :computer:
+## Work Environment :computer:
   - Excel for the display of various data from multiple sources
   - Jupyter Notebook for data preprocessing and visualization, implementing the ML algorithms
   - Libraries used: Pandas, Numpy, Matplotlib, Sklearn, Statsmodels, Seaborn
 
 
-### Step 3: Gathering and preprocessing the data :bar_chart:
+## Gathering and Preprocessing the Data :bar_chart:
 
   The datasets for every coefficient were gathered from data.worldbank.org. The next step was to merge all three datasets into a single one. Initially, it included almost 300 observations for every country on the globe, but to be more efficient I narrowed it down to only 11 countries from all continents and rearranged it into a panel dataset.
 
@@ -29,7 +44,7 @@ This project consists in an application of one of the basic models of Machine Le
 5. Urbanization Rate Dataset: https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS
 
 
-### Step 4: Exploratory Analysis for the 2 target countries :earth_asia:
+## Exploratory Analysis for the 2 target countries :earth_asia:
 
 Moving forward from the Data Cleaning & Preprocessing part in which I have gathered the factors that describe best the current state of the technological advancement, I chose Romania as target country and South Korea as the comparison country. The objective is to observe and analyze which factors contributed to an unequal advancement and visualize the results more easily by plotting the indicators side by side using subplots. Also, I found out that Corellation Heatmaps offer valuable insight on the "activity" of each coefficient.
 
@@ -40,24 +55,29 @@ Nevertheless, these aspects are merely an indication of economic growth and do n
 The most significant aspect differentiating South Korea from Romania in technological advancement is South Korea's rapid embrace of market-oriented policies and investments in innovation after transitioning from a agrarian country with a traditional economy, whereas Romania's history of communism and centrally planned economy hindered its technological progress and development.
 
 
-### Step 5: Implementing the ML Models :chart_with_upwards_trend:
+## Implementing the ML Models :chart_with_upwards_trend:
 
 Because the format of the data is auto-regressive time-series I used the **ARIMA** Model in order to predict the Internet Penetration Rate individually and **Polynomial Regression** to predict the Internet Penetration Rate based on the GDP per Capita, GDP Growth Rate % and Urbanization Rate %.
 
-- **ARIMA**: predict the Internet Penetration Rate individually
-    1. Prepare the data; perform train-test split
-    2. Determine the parameters (**p,d,q**) of the ARIMA Model:
-        1. For the **d** parameter (number of nonseasonal differencing) we perform the **Augmented Dickey-Fuller test** for stationarity
-        2. For the **p** parameter (number of autoregressive terms) we plot and analyze the **1st Order and 2nd Order Differencing** plots
-        3. For the **q** parameter (number of moving-average terms) we plot and analyze the **Autocorrelation and Partial Autocorrelation** plots
+### **ARIMA**
+
+Predict the Internet Penetration Rate individually
+
+  1. Prepare the data; perform train-test split
+  2. Determine the parameters (**p,d,q**) of the ARIMA Model:
+      1. For the **d** parameter (number of nonseasonal differencing) we perform the **Augmented Dickey-Fuller test** for stationarity
+      2. For the **p** parameter (number of autoregressive terms) we plot and analyze the **1st Order and 2nd Order Differencing** plots
+      3. For the **q** parameter (number of moving-average terms) we plot and analyze the **Autocorrelation and Partial Autocorrelation** plots
         
-    4. We build the ARIMA Model with an order of (p,d,q) that we determined by analyzing the plots
-    5.	We use the **forecast** method in order to make predictions for the test set, as well as future values 
-    6.	We plot the predictions
-    7.	We evaluate Model Performance 
+  4. We build the ARIMA Model with an order of (p,d,q) that we determined by analyzing the plots
+  5.	We use the **forecast** method in order to make predictions for the test set, as well as future values 
+  6.	We plot the predictions
+  7.	We evaluate Model Performance 
 
 
-- **Polynomial Regression**: predict the Internet Penetration Rate % for 2 models (1st containing the **Year** as independent variable & the 2nd containing **Year and GDP per capita** as independent variables)
+### **Polynomial Regression** 
+
+Predict the Internet Penetration Rate % for 2 models (1st containing the **Year** as independent variable & the 2nd containing **Year and GDP per capita** as independent variables)
   1.	Declare the variables of the model as X and y
   2.	Perform train/test split with a rate of 0.2 
   3.	Create the polynomial features with a **poly degree of 2** and declare **X_train_poly and X_test_poly**
@@ -72,7 +92,7 @@ Because the format of the data is auto-regressive time-series I used the **ARIMA
 :exclamation: In the **Polynomial Regression** implementation, for academic purposes in the 2nd model I used the ARIMA predictions for years 2022-2024 when creating the Test data for the GDP per capita.
 
 
-### Step 6: Model Evaluation :ok:
+## Model Evaluation :ok:
 
 For model evaluation, I used the most relevant statistical metrics: **R-squared, Mean Absolute Error (MAE), Mean Absolute Percentage Error (MAPE), Mean Squared Error (MSE) and Root Mean Squared Error (RMSE)**.
 
@@ -82,7 +102,7 @@ As for South Korea, ARIMA managed to perform decently (MAE:  2.15964, MAPE: 0.02
 
 However, both Polynomial Regression models performed well, providing really close predictions to one-another with a high accuracy and relatively low error scores: 
 
-#### 1st Model evaluation metrics: 
+### 1st Model evaluation metrics: 
 
 **Model Accuracy on Training Data**: **1.00**
 
@@ -101,7 +121,7 @@ MSE (Test): **1.55**
 RMSE (Test): **1.24**
 
 
-#### 2nd Model evaluation metrics: 
+### 2nd Model evaluation metrics: 
 
 **Model Accuracy on Training Data**: **1.00**
 
@@ -120,7 +140,7 @@ MSE (Test): **2.56**
 RMSE (Test): **1.60**
 
 
-### Step 7: Conclusion :white_check_mark:
+## Conclusion :white_check_mark:
 
 This project applied the basic models of Polynomial Regression and Time-Series Analysis (ARIMA) to explore the factors influencing technological advancement, with a focus on Internet Penetration Rate, GDP, and Urbanization Rate. 
 
@@ -133,7 +153,7 @@ The implementation of ARIMA and Polynomial Regression models provided valuable i
 To enhance the analysis, my future plans include incorporating additional features into the model and implementing more advanced prediction algorithms like Neural Networks or SARIMA/SARIMAX. As I am currently in the early stages of my Machine Learning journey, I aim to explore and leverage these techniques to improve the accuracy and depth of the predictions.
 
 
-### References
+## Acknowledgements
 
 These following sources and materials helped me gain a better understanding of Time-Series Analysis and prediction algorithms: 
 
